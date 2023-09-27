@@ -100,7 +100,14 @@ function criarproduto(produto) {
 
     return pa
 }
-function criarprodutolista(produto,produtolocal) {
+
+function addp(produtolocal, produtoloca) {
+    produtoloca = parseFloat(localStorage.getItem(produtolocal)) + 1
+    localStorage.setItem(produtolocal, produtoloca)
+    alert("aa")
+}
+
+function criarprodutolista(produto, produtolocal) {
     const pa = document.createElement("a")
     pa.setAttribute("class", "skoldiv1")
     pa.setAttribute("href", produto.link)
@@ -117,16 +124,69 @@ function criarprodutolista(produto,produtolocal) {
     preco.setAttribute("class", "skolp")
     preco.innerText = produto.preco
 
-    produtolocal=localStorage.getItem(produtolocal)
-    const div=document.createElement("div")
-    div.setAttribute("class","listadiv")
-    div.innerText=produtolocal
+    const finalizar = document.createElement("p")
+    finalizar.setAttribute("class", "finalizar")
+    finalizar.innerText = "Finalizar"
 
-    
+    const div = document.createElement("div")
+    div.setAttribute("class", "listadiv")
+
+    const divquantia = document.createElement("div")
+    divquantia.setAttribute("class", "divquantia")
+
+    produtoloca = localStorage.getItem(produtolocal)
+    const quantia = document.createElement("p")
+    quantia.setAttribute("class", "quantia")
+    quantia.innerText = `Qtd\n${produtoloca}`
+
+    const bmais = document.createElement("button")
+    bmais.setAttribute("class", "bmais")
+    bmais.addEventListener(`click`, function () {
+        let a = quantia.innerText.replace("Qtd", "")
+        a = parseFloat(a)
+        quantia.innerText = `Qtd\n${a + 1}`
+    })
+    bmais.addEventListener("click",function(){
+        let a = quantia.innerText.replace("Qtd", "")
+        a = parseFloat(a) 
+        localStorage.setItem(produtolocal,a)
+    })
+    bmais.innerText = "+"
+
+    const bmenos = document.createElement("button")
+    bmenos.setAttribute("class", "bmenos")
+    bmenos.addEventListener(`click`, function () {
+        let a = quantia.innerText.replace("Qtd", "")
+        if (a == 0) {
+            div.remove()
+            localStorage.removeItem(produtolocal)
+         }
+        if (a >= 1) {
+            a = parseFloat(a)
+            quantia.innerText = `Qtd\n${a - 1}`
+        }
+    })
+    bmenos.addEventListener("click",function(){
+        let a = quantia.innerText.replace("Qtd", "")
+        a = parseFloat(a) 
+        if (a == 0) {
+            div.remove()
+            localStorage.removeItem(produtolocal)
+         }else{
+        localStorage.setItem(produtolocal,a)
+         }
+    })
+    bmenos.innerText = "-"
+
     pa.appendChild(img)
     pa.appendChild(nome)
     pa.appendChild(preco)
     div.appendChild(pa)
+    divquantia.appendChild(bmenos)
+    divquantia.appendChild(quantia)
+    divquantia.appendChild(bmais)
+    div.appendChild(divquantia)
+    div.appendChild(finalizar)
     return div
 }
 
@@ -648,92 +708,92 @@ function addcart(produto) {
     let quantianaturagua = localStorage.getItem(naturagua)
     if (quantianaturagua != null) {
         quantianaturagua += -1
-        carrinholista.appendChild(criarprodutolista(pnaturagua,naturagua))
+        carrinholista.appendChild(criarprodutolista(pnaturagua, naturagua))
     }
     let quantiasol = localStorage.getItem(sol)
     if (quantiasol != null) {
         quantiasol += -1
-        carrinholista.appendChild(criarprodutolista(psol,sol))
+        carrinholista.appendChild(criarprodutolista(psol, sol))
     }
     let quantiaskol = localStorage.getItem(skol)
     if (quantiaskol != null) {
         quantiaskol += -1
-        carrinholista.appendChild(criarprodutolista(pskol,skol))
+        carrinholista.appendChild(criarprodutolista(pskol, skol))
     }
     let quantiabrahma = localStorage.getItem(brahma)
     if (quantiabrahma != null) {
         quantiabrahma += -1
-        carrinholista.appendChild(criarprodutolista(pbrahma,brahma))
+        carrinholista.appendChild(criarprodutolista(pbrahma, brahma))
     }
     let quantiabrahmaduplo = localStorage.getItem(brahmaduplo)
     if (quantiabrahmaduplo != null) {
         quantiabrahmaduplo += -1
-        carrinholista.appendChild(criarprodutolista(pbrahmaduplo,brahmaduplo))
+        carrinholista.appendChild(criarprodutolista(pbrahmaduplo, brahmaduplo))
     }
     let quantiabudweiser = localStorage.getItem(budweiser)
     if (quantiabudweiser != null) {
         quantiabudweiser += -1
-        carrinholista.appendChild(criarprodutolista(pbudweiser,budweiser))
+        carrinholista.appendChild(criarprodutolista(pbudweiser, budweiser))
     }
     let quantiabudweiserlata = localStorage.getItem(budweiserlata)
     if (quantiabudweiserlata != null) {
         quantiabudweiserlata += -1
-        carrinholista.appendChild(criarprodutolista(pbudweiserlata,budweiserlata))
+        carrinholista.appendChild(criarprodutolista(pbudweiserlata, budweiserlata))
     }
     let quantiaheineken = localStorage.getItem(heineken)
     if (quantiaheineken != null) {
         quantiaheineken += -1
-        carrinholista.appendChild(criarprodutolista(pheineken,heineken))
+        carrinholista.appendChild(criarprodutolista(pheineken, heineken))
     }
     let quantiagelo = localStorage.getItem(gelo)
     if (quantiagelo != null) {
         quantiagelo += -1
-        carrinholista.appendChild(criarprodutolista(pgelo,gelo))
+        carrinholista.appendChild(criarprodutolista(pgelo, gelo))
     }
     let quantiastella = localStorage.getItem(stella)
     if (quantiastella != null) {
         quantiastella += -1
-        carrinholista.appendChild(criarprodutolista(pstella,stella))
+        carrinholista.appendChild(criarprodutolista(pstella, stella))
     }
     let quantiaspaten = localStorage.getItem(spaten)
     if (quantiaspaten != null) {
         quantiaspaten += -1
-        carrinholista.appendChild(criarprodutolista(pspaten,spaten))
+        carrinholista.appendChild(criarprodutolista(pspaten, spaten))
     }
     let quantiaypioca = localStorage.getItem(ypioca)
     if (quantiaypioca != null) {
         quantiaypioca += -1
-        carrinholista.appendChild(criarprodutolista(pypioca,ypioca))
+        carrinholista.appendChild(criarprodutolista(pypioca, ypioca))
     }
     let quantia_51 = localStorage.getItem(_51)
     if (quantia_51 != null) {
         quantia_51 += -1
-        carrinholista.appendChild(criarprodutolista(p_51,_51))
+        carrinholista.appendChild(criarprodutolista(p_51, _51))
     }
     let quantia_51gold = localStorage.getItem(_51gold)
     if (quantia_51gold != null) {
         quantia_51gold += -1
-        carrinholista.appendChild(criarprodutolista(p_51gold,_51gold))
+        carrinholista.appendChild(criarprodutolista(p_51gold, _51gold))
     }
     let quantiaslovaazul = localStorage.getItem(slovaazul)
     if (quantiaslovaazul != null) {
         quantiaslovaazul += -1
-        carrinholista.appendChild(criarprodutolista(pslovaazul,slovaazul))
+        carrinholista.appendChild(criarprodutolista(pslovaazul, slovaazul))
     }
     let quantiaslovavermelha = localStorage.getItem(slovavermelha)
     if (quantiaslovavermelha != null) {
         quantiaslovavermelha += -1
-        carrinholista.appendChild(criarprodutolista(pslovavermelha,slovavermelha))
+        carrinholista.appendChild(criarprodutolista(pslovavermelha, slovavermelha))
     }
     let quantiafanta2l = localStorage.getItem(fanta2l)
     if (quantiafanta2l != null) {
         quantiafanta2l += -1
-        carrinholista.appendChild(criarprodutolista(pfanta2l,fanta2l))
+        carrinholista.appendChild(criarprodutolista(pfanta2l, fanta2l))
     }
     let quantiaredbull = localStorage.getItem(redbull)
     if (quantiaredbull != null) {
         quantiaredbull += -1
-        carrinholista.appendChild(criarprodutolista(predbull,redbull))
+        carrinholista.appendChild(criarprodutolista(predbull, redbull))
     }
 }
 

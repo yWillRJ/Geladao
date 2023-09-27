@@ -509,8 +509,8 @@ body {
     border-style: solid;
     border-width: 0.3vh;
     border-radius: 1vw;
-    border-color:rgb(94, 9, 17) ;
-    top:2vh;
+    border-color: rgb(94, 9, 17);
+    top: 2vh;
     justify-content: space-around;
     flex-direction: row;
     margin-bottom: 2vh;
@@ -518,7 +518,7 @@ body {
 
 .skoldiv1 {
     position: absolute;
-    right:51vw;
+    right: 51vw;
     padding-top: 3vh;
     transition: border-color 0.3s;
     transition: background-color 0.3s;
@@ -535,4 +535,82 @@ body {
     padding-top: 3vh;
     border-color: rgba(0, 0, 0, 0.055);
     background-color: rgba(0, 0, 0, 0.055);
+}
+
+.divquantia {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: 23vh;
+    position: relative;
+    gap: 1vw;
+    display: flex;
+    width: 7vw;
+    height: 4vh;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.1vw;
+
+    left: 0vw;
+
+}
+
+.bmais {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    width: 2vw;
+    height: 4vh;
+    border: 0.1vw;
+    background-color: rgb(238, 148, 30);
+    transition: background-coor 0.5s;
+    cursor: pointer;
+}
+
+.bmenos {
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    width: 2vw;
+    height: 4vh;
+    background-color: rgb(238, 148, 30);
+    transition: background-coor 0.5s;
+    cursor: pointer;
+}
+
+.bmais:hover {
+    background-color: rgba(238, 148, 30, 0.623);
+}
+
+.bmenos:hover {
+    background-color: rgba(238, 148, 30, 0.623);
+}
+
+.finalizar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 0.5vw;
+    font-size: 3vh;
+    height: 5vh;
+    width: 6vw;
+    color: white;
+    border-width: 0.2vw;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(238, 148, 30);
+    transition: background-color 0.5s;
+    cursor: pointer;
+    top: 22vh;
+    left: 7vw;
+}
+
+.finalizar:hover {
+    background-color: rgba(238, 148, 30, 0.733);
 }
