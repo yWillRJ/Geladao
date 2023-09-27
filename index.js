@@ -101,7 +101,7 @@ function criarproduto(produto) {
     return pa
 }
 function criarprodutolista(produto,produtolocal) {
-    const pa = document.createElement("div")
+    const pa = document.createElement("a")
     pa.setAttribute("class", "skoldiv1")
     pa.setAttribute("href", produto.link)
 
