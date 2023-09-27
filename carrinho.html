@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="Geladao.png">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geladão Bebidas</title>
+</head>
+
+<body>
+    <div class="topo" id="topo">
+        <a id="logo" href="index.html">
+            <img id="logo-img" src="Geladao.png" usemap="#image-map">
+        </a>
+        <a href="index.html" id="inicio" class="inicio">Inicio</a>
+        <a href="produtos.html" id="produtos" class="produtos">Produtos</a>
+        <input id="search" class="search" placeholder="Pesquisar">
+        <div class="divlupa">
+            <img class="lupa" src="lupa.png">
+        </div>
+        <div class="buttons">
+            <img class="modo" id="modo" src="mododia.png" onclick="mudarmodo2()">
+            <img class="perfil" id="perfil" src="perfil.png">
+            <img class="cfg" id="cfg" src="cfg.png" onclick="abrirbotoes()">
+        </div>
+        <div class="carrinhodiv">
+            <img class="carrinhoimg" src="carrinho.png" onclick="ircarrinho()">
+        </div>
+    </div>
+
+
+
+    <br>
+
+
+
+    <div class="cevejas">
+        <p class="cerveja">
+            Carrinho
+        </p>
+    </div>
+    <div id="carrinholista" class="imagescarrinho">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

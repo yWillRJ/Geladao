@@ -1,0 +1,538 @@
+input {
+    outline: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.topo {
+    margin-top: 2vh;
+    background-color: rgb(255, 153, 0);
+    height: 12vh;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    text-align: center;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-width: 0.4vh;
+    border-color: rgb(94, 9, 17);
+}
+
+
+
+.inicio:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+    border-bottom-style: solid;
+    padding-bottom: 2vh;
+    padding-top: 1.95vh;
+    border-color: white;
+    border-bottom-width: 0.4vh;
+    background-position: 0%;
+}
+
+.inicio {
+    text-align: center;
+    border-radius: 0vh;
+    align-items: center;
+    border-top: 5vw;
+    padding-left: 1.2vh;
+    height: 8vh;
+    width: 2.9vw;
+    color: rgb(0, 0, 0);
+    display: flex;
+    top: 0vh;
+    left: 12vw;
+    position: relative;
+    font-size: 2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.5s, border-color 0.5s;
+    padding-bottom: 1.85vh;
+    padding-top: 1.85vh;
+    background-position: 100%;
+    border-color: transparent;
+}
+
+.produtos:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+    border-bottom-style: solid;
+    border-color: white;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    border-bottom-width: 0.4vh;
+}
+
+.produtos {
+    border-color: transparent;
+    text-align: center;
+    border-radius: 0vh;
+    align-items: center;
+    border-top: 5vw;
+    padding-left: 1.2vh;
+    height: 8vh;
+    width: 4.5vw;
+    color: rgb(0, 0, 0);
+    display: flex;
+    top: 0vh;
+    left: 12vw;
+    position: relative;
+    font-size: 2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.5s, border-color 0.5s;
+    padding-bottom: 1.85vh;
+    padding-top: 1.85vh;
+}
+
+#logo {
+    position: relative;
+    left: 5vw;
+    clip-path: polygon(50% 5%, 0% 92%, 100% 89%);
+}
+
+#logo-img {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.images {
+    box-shadow: rgba(0, 0, 0, 0.900);
+    position: relative;
+    background-color: rgb(255, 153, 0);
+    max-width: 80vw;
+    width: 74.5vw;
+    min-height: 30vh;
+    border-style: solid;
+    border-color: rgb(94, 9, 17);
+    border-width: 0.4vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0vh;
+    border-radius: 4vh;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    overflow-x: hidden;
+}
+
+.imagescarrinho {
+    box-shadow: rgba(0, 0, 0, 0.900);
+    position: relative;
+    background-color: rgb(255, 153, 0);
+    max-width: 80vw;
+    width: 74.5vw;
+    min-height: 30vh;
+    border-style: solid;
+    border-color: rgb(94, 9, 17);
+    border-width: 0.4vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    display: flex;
+    margin: 0vh;
+    border-radius: 4vh;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    overflow-x: hidden;
+}
+
+.imagens {
+    width: 70vw;
+    position: relative;
+    max-width: 80vw;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 1s;
+    overflow: visible;
+}
+
+.skoldiv {
+    position: relative;
+    bottom: 1.5vh;
+    padding-top: 4vh;
+    transition: border-color 0.3s;
+    transition: background-color 0.3s;
+    margin: 0vh;
+    width: 16vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4vh;
+}
+
+
+.skoldiv:hover {
+    padding-top: 4vh;
+    border-color: rgba(0, 0, 0, 0.055);
+    background-color: rgba(0, 0, 0, 0.055);
+}
+
+.skolimg {
+    width: 10vw;
+    height: 20vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    border: 0.1vh;
+    border-radius: 4vh;
+
+}
+
+.skolp {
+    color: rgb(68, 7, 13);
+    font-size: 2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search {
+    background-color: rgba(255, 255, 255, 0.100);
+    border-color: rgb(68, 7, 13);
+    position: relative;
+    width: 15vw;
+    height: 4vh;
+    left: 28vw;
+    top: 3.7vh;
+    border-style: solid;
+    border-radius: 5vw;
+    border-width: 0.12vw;
+    font-size: 2vh;
+    transition: background-color 1s;
+}
+
+.search:hover {
+    background-color: rgba(255, 255, 255, 0.300);
+}
+
+.search::placeholder {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: inherit;
+    font-size: 2.2vh;
+}
+
+.menuproduto {
+    background-color: rgb(255, 167, 34);
+    display: flex;
+    width: 60vw;
+    height: 90vh;
+    position: relative;
+    top: 2vh;
+    border-style: solid;
+    border-color: rgb(68, 7, 13);
+}
+
+.menuimg {
+    position: relative;
+    display: flex;
+    width: 25vw;
+    height: 50vh;
+    top: 8vh;
+    left: 3vh;
+    border-radius: 20vw;
+}
+
+.menutext {
+    font-size: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    left: 7vw;
+    top: 10vh;
+}
+
+.whats {
+    width: 2.5vw;
+    height: 5vh;
+    display: flex;
+
+}
+
+.phone {
+    position: relative;
+    bottom: 3.6vh;
+    left: 2.2vw;
+    font-size: 2vh;
+    color: black;
+}
+
+.phonediv {
+    display: flex;
+    height: 5vh;
+    width: 13.3vw;
+    transition: background-color 0.4s;
+}
+
+.phonediv:hover {
+    background-color: rgba(0, 0, 0, 0.158);
+}
+
+.insta {
+    width: 1.5vw;
+    height: 3vh;
+    display: flex;
+    position: relative;
+    top: 1vh;
+    left: 1vh
+}
+
+.instadiv {
+    display: flex;
+    height: 5vh;
+    width: 13.3vw;
+    flex-direction: row;
+    transition: background-color 0.4s;
+}
+
+.instap {
+    position: relative;
+    bottom: 1.7vh;
+    left: 2.2vw;
+    font-size: 2vh;
+    color: black;
+}
+
+.instadiv:hover {
+    background-color: rgba(0, 0, 0, 0.158);
+}
+
+.divrede {
+    height: 9.99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 63vw;
+    bottom: 65vh;
+}
+
+.buttons {
+    display: flex;
+    position: absolute;
+    top: 6vh;
+    right: 15vw;
+
+}
+
+.cfg {
+    filter: invert(100%);
+    width: 4vh;
+    height: 4vh;
+    position: absolute;
+    cursor: pointer;
+}
+
+.modo {
+    cursor: pointer;
+    display: none;
+    border-style: outset;
+    border-radius: 40px;
+    border-color: black;
+    position: absolute;
+    width: 14vh;
+    right: -1vw;
+    top: -0.3vh;
+    height: 5vh;
+    transition: rotate 2s ease;
+}
+
+.perfil {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+}
+
+.cevejas {
+    width: 74.5vw;
+    height: 4vh;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    border-style: solid;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 5vh;
+    border-color: rgb(94, 9, 17);
+    background-color: rgb(94, 9, 17);
+}
+
+.cerveja {
+    width: 74.5vh;
+    position: relative;
+    top: 0.5vh;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.divlupa {
+    position: relative;
+    left: 25.5vw;
+    top: 4.7vh;
+    width: 3.5vh;
+    height: 3.5vh;
+    border-radius: 5vh;
+}
+
+.lupa {
+    color: black;
+    width: 2.5vh;
+    height: 2.5vh;
+
+}
+
+.left {
+    position: absolute;
+    display: flex;
+    width: 8vh;
+    height: 8vh;
+    top: 30vh;
+    left: 4vw;
+    border-radius: 20vw;
+    cursor: pointer;
+    transition: outline 0.05s;
+}
+
+.left:hover {
+    outline: 2.5px solid;
+}
+
+.right:hover {
+    outline: 2.5px solid;
+}
+
+.right {
+    transition: outline 0.05s;
+    border-radius: 20vw;
+    rotate: 180deg;
+    position: absolute;
+    top: 30vh;
+    right: 4vw;
+    display: flex;
+    width: 8vh;
+    height: 8vh;
+    cursor: pointer;
+}
+
+.carrinhodiv {
+    display: flex;
+    position: absolute;
+    right: 2vw;
+    width: 10vw;
+    height: 10vh;
+    top: 5.5vh;
+}
+
+.carrinhoimg {
+    width: 2.5vw;
+    height: 4vh;
+    display: flex;
+    cursor: pointer;
+    border-radius: 4vh;
+    padding-left: 0.3vw;
+    padding-right: 0.5vw;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    transition: background-color 0.5s;
+    border-color: transparent;
+
+}
+
+.carrinhoimg:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+.adicionardiv {
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    right: 15.5vw;
+    top: 45vh;
+    font-size: 2vh;
+    color: white;
+    border-style: solid;
+    border-radius: 0.5vh;
+    border-width: 0.3vh;
+    padding: 0.5vh;
+    border-color: rgb(238, 148, 30);
+    background-color: rgb(238, 148, 30);
+    font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+.adicionar {
+    position: relative;
+    top: 0.3vh
+}
+
+.adicionardiv:hover {
+    border-color: rgba(0, 0, 0, 0.192);
+    background-color: rgba(0, 0, 0, 0.192);
+}
+
+.carrinho {
+    width: 2vw;
+    height: 3vh;
+}
+
+.listadiv {
+    position: relative;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.952);
+    width: 50vw;
+    height: 30vh;
+    left: 7vw;
+    border-style: solid;
+    border-width: 0.3vh;
+    border-radius: 1vw;
+    border-color:rgb(94, 9, 17) ;
+    top:2vh;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+
+.skoldiv1 {
+    position: absolute;
+    right:51vw;
+    padding-top: 3vh;
+    transition: border-color 0.3s;
+    transition: background-color 0.3s;
+    margin: 0vh;
+    gap: 1vh;
+    width: 16vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4vh;
+}
+
+.skoldiv1:hover {
+    padding-top: 3vh;
+    border-color: rgba(0, 0, 0, 0.055);
+    background-color: rgba(0, 0, 0, 0.055);
+}

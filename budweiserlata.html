@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="Geladao.png">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geladão Bebidas</title>
+</head>
+
+<body>
+    <div class="topo" id="topo">
+        <a id="logo" href="index.html">
+            <img id="logo-img" src="Geladao.png" usemap="#image-map">
+        </a>
+        <a href="index.html" id="inicio" class="inicio">Inicio</a>
+        <a href="produtos.html" id="produtos" class="produtos">Produtos</a>
+        <input id="search" class="search" placeholder="Pesquisar">
+        <div class="divlupa">
+            <img class="lupa" src="lupa.png">
+        </div>
+        <div class="buttons">
+            <img class="modo" id="modo" src="mododia.png" onclick="mudarmodo()">
+            <img class="perfil" id="perfil" src="perfil.png">
+            <img class="cfg" id="cfg" src="cfg.png" onclick="abrirbotoes()">
+        </div>
+        <div class="carrinhodiv">
+            <img class="carrinhoimg" src="carrinho.png" onclick="ircarrinho()">
+        </div>
+    </div>
+
+    <div class="menuproduto">
+        <img class="menuimg" src="budweiserlata.png">
+        <p class="menutext">Cerveja Budweiser Lata R$3,99</p>
+        <div class="adicionardiv" onclick="adicionar(budweiserlata)">
+            <img src="carrinho.png" class="carrinho">
+        <p class="adicionar">Adicionar ao Carrinho</p>
+        </div>
+        <div class="divrede">
+            <div class="phonediv">
+                <a href="https://wa.me/5585981990320" target="_blank">
+                    <img class="whats" src="whatsapp.png">
+                    <p id="phone" class="phone">Telefone para Contato</p>
+                </a>
+            </div>
+            <div class="instadiv">
+                <a href="https://www.instagram.com/geladao_delivery/" target="_blank">
+                    <img class="insta" src="insta.png">
+                    <p id="insta" class="instap">Nos Siga No Instagram</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
